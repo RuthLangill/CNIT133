@@ -1,0 +1,1 @@
+document.write( "<p style='text-align: center; margin: 60px;'><strong><span style='font-family: times new roman; color: red;'> xy</span><span style = 'font-family: Ariel; color: Blue;'> 12</span><span style = 'font-family: impact; color: green;'><em> 89</em></span></strong></p>");

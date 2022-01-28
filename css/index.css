@@ -18,7 +18,9 @@ a {
   color: #1D3557;
 }
 p {
-  margin: 15px;
+  margin-top: 50px;
+  margin-left: 20%;
+  margin-right: 3%;
 }
 a:hover {
   color: #024959;
