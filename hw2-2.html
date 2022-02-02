@@ -25,37 +25,39 @@
   </nav>
 
   <table>
-    <th colspan="100%">Input 3 Numbers to calculate the Sum, Average, Product, smallest number, and largest number.
-    </th>
-    <tbody>
-      <form>
+    <thead>
+      <th colspan="2">Input 3 Numbers to calculate the Sum, Average, Product, smallest number, and largest number.
+      </th>
+    </thead>
+    <form>
+      <tbody>
+
         <tr>
           <td><label for='number1'>Enter a Number</label></td>
-          <td><input type="number" id='number1'>
+          <td><input type="number" id='number1'></td>
         </tr>
-        </td>
+        
         <tr>
           <td><label for='number2'>Enter a second Number</label></td>
           <td><input type="number" id='number2'></td>
         </tr>
         <tr>
           <td><label for='num3'>Enter a Third Number</label></td>
-          <td><input type="number" id='number3'>
+          <td><input type="number" id='number3'></td>
         </tr>
-        </td>
 
         <tr>
           <td><textarea id='results' readonly></textarea></td>
         </tr>
         <tr>
-          <td><input type="reset" value="RESET"></td>
+          <td><input type="reset" value="RESET" onclick="resetText()"></td>
           <td><input type="button" value='Calculate' id="submit" onclick='calculate()'></td>
         </tr>
 
         <tr>
           <td><input type='button' id='fade' value='Click to fade results' onclick='fadeResults()'></td>
         </tr>
-    </tbody>
+      </tbody>
     </form>
   </table>
 </body>

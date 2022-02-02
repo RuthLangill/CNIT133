@@ -19,8 +19,11 @@ function calculate(){
   }
   results = "The sum is: "+sum +"\n The average is: " + avg + "\n The product is: " + product +"\n The smallest number is: " + min +"\n The largest number is: "+ max
   
-  let display = document.getElementById('results').innerHTML = results
-  return display
+  return document.getElementById('results').innerHTML = results
+}
+
+function resetText(){
+  return document.getElementById("results").innerHTML = "";
 }
 
 function fadeResults(){
