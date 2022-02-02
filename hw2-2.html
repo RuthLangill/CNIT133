@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Ruth Langill homework assignment 2 part 2 for CNIT-133 Javascript course with CCSF">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ruth Langill">
+
+  <meta property="og:title" content="Homework 2 CNIT-133">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hills.ccsf.edu/~rlangill//hw2-2.html">
+
+  <title>Homework 2 part 2</title>
+  <link rel="stylesheet" href="css/hw2.css">
+  <script src="part2.js"></script>
+</head>
+
+<body>
+  <h1>Playing with Numbers</h1>
+  <nav>
+    <ul class="menu">
+      <li><a href="hw2.html">Back</a></li>
+    </ul>
+  </nav>
+
+  <table>
+    <th colspan="100%">Input 3 Numbers to calculate the Sum, Average, Product, smallest number, and largest number.
+    </th>
+    <tbody>
+      <form>
+        <tr>
+          <td><label for='number1'>Enter a Number</label></td>
+          <td><input type="number" id='number1'>
+        </tr>
+        </td>
+        <tr>
+          <td><label for='number2'>Enter a second Number</label></td>
+          <td><input type="number" id='number2'></td>
+        </tr>
+        <tr>
+          <td><label for='num3'>Enter a Third Number</label></td>
+          <td><input type="number" id='number3'>
+        </tr>
+        </td>
+
+        <tr>
+          <td><textarea id='results' readonly></textarea></td>
+        </tr>
+        <tr>
+          <td><input type="reset" value="RESET"></td>
+          <td><input type="button" value='Calculate' id="submit" onclick='calculate()'></td>
+        </tr>
+
+        <tr>
+          <td><input type='button' id='fade' value='Click to fade results' onclick='fadeResults()'></td>
+        </tr>
+    </tbody>
+    </form>
+  </table>
+</body>
+
+</html>
