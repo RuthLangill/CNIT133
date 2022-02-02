@@ -23,13 +23,14 @@
       <li><a href="hw2.html">Back</a></li>
     </ul>
   </nav>
-
+<form>
   <table>
     <thead>
+      <tr>
       <th colspan="2">Input 3 Numbers to calculate the Sum, Average, Product, smallest number, and largest number.
-      </th>
+      </th></tr>
     </thead>
-    <form>
+    
       <tbody>
 
         <tr>
@@ -42,12 +43,12 @@
           <td><input type="number" id='number2'></td>
         </tr>
         <tr>
-          <td><label for='num3'>Enter a Third Number</label></td>
+          <td><label for='number3'>Enter a Third Number</label></td>
           <td><input type="number" id='number3'></td>
         </tr>
 
         <tr>
-          <td><textarea id='results' readonly></textarea></td>
+          <td colspan="2"><textarea id='results' readonly></textarea></td>
         </tr>
         <tr>
           <td><input type="reset" value="RESET" onclick="resetText()"></td>
@@ -58,8 +59,9 @@
           <td><input type='button' id='fade' value='Click to fade results' onclick='fadeResults()'></td>
         </tr>
       </tbody>
-    </form>
+    
   </table>
+  </form>
 </body>
 
 </html>
