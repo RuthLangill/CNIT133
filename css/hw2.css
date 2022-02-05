@@ -40,6 +40,13 @@ th {
   margin: 15px;
 }
 
+p {
+  text-transform: capitalize;
+  font-size: 2em;
+  color: #F29F05;
+
+}
+
 /*small screen*/
 @media only screen and (max-width: 600px) {
   body{

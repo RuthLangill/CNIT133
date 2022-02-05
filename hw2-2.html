@@ -7,13 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Ruth Langill">
 
-  <meta property="og:title" content="Homework 2 CNIT-133">
+  <meta property="og:title" content="Homework 2 Part 2CNIT-133">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hills.ccsf.edu/~rlangill//hw2-2.html">
 
   <title>Homework 2 part 2</title>
   <link rel="stylesheet" href="css/hw2.css">
   <script src="part2.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#fade").click(function () {
+        $("#results").fadeTo("slow", 0.15);
+      });
+      $("#reset").click(function(){
+        $('#results').fadeIn();
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -23,21 +34,22 @@
       <li><a href="hw2.html">Back</a></li>
     </ul>
   </nav>
-<form>
-  <table>
-    <thead>
-      <tr>
-      <th colspan="2">Input 3 Numbers to calculate the Sum, Average, Product, smallest number, and largest number.
-      </th></tr>
-    </thead>
-    
+  <form>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Input 3 Numbers to calculate the Sum, Average, Product, smallest number, and largest number.
+          </th>
+        </tr>
+      </thead>
+
       <tbody>
 
         <tr>
           <td><label for='number1'>Enter a Number</label></td>
           <td><input type="number" id='number1'></td>
         </tr>
-        
+
         <tr>
           <td><label for='number2'>Enter a second Number</label></td>
           <td><input type="number" id='number2'></td>
@@ -51,17 +63,18 @@
           <td colspan="2"><textarea id='results' readonly></textarea></td>
         </tr>
         <tr>
-          <td><input type="reset" value="RESET" onclick="resetText()"></td>
+          <td><input id="reset" type="reset" value="RESET" onclick="resetText()"></td>
           <td><input type="button" value='Calculate' id="submit" onclick='calculate()'></td>
         </tr>
 
         <tr>
-          <td><input type='button' id='fade' value='Click to fade results' onclick='fadeResults()'></td>
+          <td><input type='button' id='fade' value='Click to fade results'></td>
         </tr>
       </tbody>
-    
-  </table>
+
+    </table>
   </form>
+  <p id='error'></p>
 </body>
 
 </html>
