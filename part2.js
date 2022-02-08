@@ -1,5 +1,7 @@
 function calculate(){
   //function to calculate the sum, average, product, min number and max number of the numbers input by the
+  document.getElementById('error').innerText = "";
+  document.getElementById('results').style.opacity = '1';
   let num1 = document.getElementById('number1').value;
   let num2 = document.getElementById('number2').value;
   let num3 = document.getElementById('number3').value;
