@@ -12,35 +12,64 @@
   <meta property="og:url" content="https://hills.ccsf.edu/~rlangill//hw2-1.html">
 
   <title>Homework 2 part 3</title>
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/hw2-3.css">
   <script src="part3.js"></script>
 </head>
 
 <body>
-
+<h1>Exchange Rates</h1>
   <nav>
     <ul class="menu">
       <li><a href="hw2.html">Back</a></li>
     </ul>
   </nav>
-  <h1>Exchange Rates</h1>
-  <form>
-    <label for='USdollarInput'></label>
-    <input id='USdollarInput' type="number">
-    <input type='button' id='submit' onclick='calculate()'>
-  </form>
 
+  
+
+
+  <p>
+    The foreign exchange rates in June 2021</p>
+  <p>Enter a dollar amount in the table below to see the corresponding foreign exchange values
+  </p>
+
+  <table>
+    <form>
+      <tr>
+        <td>
+          <input type='button' id='submit' value="Submit" onclick='calculateCurrancy()'>
+        <td>
+          <label for='USdollarInput'>Enter a dollar amount</label>
+          <input id='USdollarInput' type="number" min='0'>
+        </td>
+      </tr>
+    </form>
+  </table>
   <table>
     <thead>
       <tr>
-        <th></th>
-        <th></th>
+        <th colspan="2">Exchange Rates</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td></td>
-        <td></td>
+        <td>Euro</td>
+        <td id='europe' class='rightTable'></td>
+      </tr>
+      <tr>
+        <td>Canadian Dollar</td>
+        <td id='canada' class="rightTable"></td>
+      </tr>
+      <tr>
+        <td>Hong Kong Dollar</td>
+        <td id='hongKong' class="rightTable"></td>
+      </tr>
+      <tr>
+        <td>Japanese Yen</td>
+        <td id='japan' class="rightTable"></td>
+      </tr>
+      <tr>
+        <td>Mexican Peso</td>
+        <td id='mexico' class="rightTable"></td>
       </tr>
     </tbody>
   </table>
