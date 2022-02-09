@@ -14,6 +14,16 @@
   <title>Homework 2 part 3</title>
   <link rel="stylesheet" href="css/hw2-3.css">
   <script src="part3.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#description").click(function(){
+    $("#instructions").slideToggle("slow");
+  });
+});
+</script>
+
 </head>
 
 <body>
@@ -27,9 +37,10 @@
   
 
 
-  <p>
-    The foreign exchange rates in June 2021</p>
-  <p>Enter a dollar amount in the table below to see the corresponding foreign exchange values
+  <h2 id="description">
+    The foreign exchange rates in June 2021<br>
+  -- click to collapse or expand instructions -- </h2>
+  <p id='instructions'> Instructions -- Enter a dollar amount in the table below to see the corresponding foreign exchange values
   </p>
 
   <table>
