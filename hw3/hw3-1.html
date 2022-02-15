@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Ruth Langill homework assignment 3 for CNIT-133 Javascript course with CCSF">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ruth Langill">
+
+  <meta property="og:title" content="Homework 3 CNIT-133">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hills.ccsf.edu/~rlangill//hw3.html">
+
+  <title>Homework 3 part 1</title>
+  <link rel="stylesheet" href="/css/hw3.css">
+  <script src="/hw3-js/hw3-1.js"></script>
+</head>
+
+<body>
+  <h1>Homework 3 Part 1</h1>
+  <nav>
+    <ul class="menu">
+      <li><a href="/hw3.html">Back</a></li>
+    </ul>
+  </nav>
+  <h2>Student Grades</h2>
+  
+  <p id='msg'></p>
+
+  <form id='inputData'>
+    <label for='homework'>homework average</label>
+      <input id='homework' type="number">
+    <label for='midterm'>mid-term exam score</label>
+      <input id='midterm' type="number">
+    <label for='final'>final exam score</label>
+      <input id='final' type="number">
+    <label for='participation'>participation score</label>
+      <input id='participation' type="number">
+    <input type='button' value='Calculate' onclick=calculate()>
+  </form>
+  <form id='outputData'>
+    <label for='score'>Student score</label>
+    <input id='score' class='output' type='text' readonly>
+    <label for='letter'>Letter Grade</label>
+    <input id='letter' class='output' type="text" readonly>
+  </form>
+</body>
+
+</html>
