@@ -12,7 +12,8 @@
   <meta property="og:url" content="https://hills.ccsf.edu/~rlangill//hw3.html">
 
   <title>Homework 3 part 3</title>
-  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/hw3.css">
+  <script src="../hw3-js/hw3-3.js"></script>
 </head>
 <body>
   <h1>Homework 3 Part 3</h1>
@@ -22,5 +23,15 @@
     </ul>
   </nav>
   <h2>CNIT 133 Homework 3 - Functions</h2>
+  <form>
+    <p id='error'></p>
+    <label for='inputTemp'>Please input the tempature you would like to convert</label>
+    <input id='inputTemp' type="number">
+    <input id='farenheit' type="button" value="Convert to Farenheit" onclick=toF()>
+    <input id='celsius' type="button" value="Convert to Celsius" onclick=toC()>
+    <textarea id='results' type='text' readonly >
+
+    </textarea>
+  </form>
 </body>
 </html>

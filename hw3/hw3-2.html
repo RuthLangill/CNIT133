@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://hills.ccsf.edu/~rlangill//hw3.html">
 
   <title>Homework 3 part 2</title>
-  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/hw3.css">
   <script src="../hw3-js/hw3-2.js"></script>
 </head>
 <body>
@@ -23,6 +23,7 @@
     </ul>
   </nav>
   <h2>CNIT 133 Homework 3 - Functions</h2>
+  <p id='error'></p>
   <form>
     <label for='name'>Salesperson</label>
       <input id='name' type="text">
@@ -35,7 +36,7 @@
     <label for='item4'>Item 4</label>
       <input id='item4' type="number">
       <input id='submit' type="button" value="Submit" onclick=calculate()>
-      <input id='reset' type="button" value='Reset' onclick=reset()>
+      <input id='reset' type="button" value='Reset' onclick=resetAll()>
       <table>
         <tr>
           <th>Item #</th>
