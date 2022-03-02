@@ -1,6 +1,6 @@
 
-function resetAll(){
-  document.getElementsByTagName('input').value = ''
+function clearForm(){
+  document.getElementById('myForm').reset()
   document.getElementById('error').innerText = ''
 }
 
@@ -17,12 +17,12 @@ function calculate(){
   item4 = parseInt(item4)
 
   if (isNaN(item1)||isNaN(item2)||isNaN(item3)||isNaN(item4)){
-    resetAll()
+    clearForm()
     errorMsg.innerText = 'Please enter 4 valid numbers. At least one of the numbers you entered was not a valid number'
     return
   }
   if (item1 <0 || item2<0 || item3<0||item4<0){
-    resetAll()
+    clearForm()
     errorMsg.innerText = 'Please enter 4 positive numbers. at least one of the numbers you entered was a negative number'
     return
   } 

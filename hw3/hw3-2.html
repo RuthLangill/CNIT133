@@ -12,8 +12,14 @@
   <meta property="og:url" content="https://hills.ccsf.edu/~rlangill//hw3.html">
 
   <title>Homework 3 part 2</title>
-  <link rel="stylesheet" href="../css/hw3.css">
-  <script src="../hw3-js/hw3-2.js"></script>
+  <link rel="stylesheet" href="../css/hw3-2.css">
+  <script src="../hw3-js/hw3.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $(document).tooltip();
+    } );
+    </script>
 </head>
 <body>
   <h1>Homework 3 Part 2</h1>
@@ -24,19 +30,19 @@
   </nav>
   <h2>CNIT 133 Homework 3 - Functions</h2>
   <p id='error'></p>
-  <form>
+  <form id='myForm'>
     <label for='name'>Salesperson</label>
-      <input id='name' type="text">
+      <input id='name' type="text" title="Please make sure that the salesperson's name is spelled correctly">
     <label for='item1'>Item 1</label>
-      <input id='item1' type="number">
+      <input id='item1'  type="number">
     <label for='item2'>Item 2</label>
-      <input id='item2' type="number">
+      <input id='item2'  type="number">
     <label for='item3'>Item 3</label>
-      <input id='item3' type="number">
+      <input id='item3'  type="number">
     <label for='item4'>Item 4</label>
-      <input id='item4' type="number">
-      <input id='submit' type="button" value="Submit" onclick=calculate()>
-      <input id='reset' type="button" value='Reset' onclick=resetAll()>
+      <input id='item4'  type="number">
+      <input type="button" value="Submit" onclick=calculate()>
+      <input type="button" value='Reset' onclick=clearForm()>
       <table>
         <tr>
           <th>Item #</th>
@@ -47,34 +53,34 @@
         <tr>
           <td>1</td>
           <td>$20.99</td>
-          <td><input id='numsold1' readonly></td>
-          <td><input id='totalsold1' readonly></td>
+          <td><input id='numsold1' class='output' readonly></td>
+          <td><input id='totalsold1' class='output' readonly></td>
         </tr>
         <tr>
           <td>2</td>
           <td>$12.75</td>
-          <td><input id='numsold2' readonly></td>
-          <td><input id='totalsold2' readonly></td>
+          <td><input id='numsold2' class='output' readonly></td>
+          <td><input id='totalsold2' class='output' readonly></td>
         </tr>
         <tr>
           <td>3</td>
           <td>$9.95</td>
-          <td><input id='numsold3' readonly></td>
-          <td><input id='totalsold3' readonly></td>
+          <td><input id='numsold3' class='output' readonly></td>
+          <td><input id='totalsold3' class='output' readonly></td>
         </tr>
         <tr>
           <td>4</td>
           <td>$35.89</td>
-          <td><input id='numsold4' readonly></td>
-          <td><input id="totalsold4" readonly></td>
+          <td><input id='numsold4' class='output' readonly></td>
+          <td><input id="totalsold4" class='output' readonly></td>
         </tr>
         <tr>
           <td colspan="3">Total Amount Sold</td>
-          <td><input id='totalsold' readonly></td>
+          <td><input id='totalsold' class='output' readonly></td>
         </tr>
         <tr>
           <td colspan="3">Total Weekly Earnings</td>
-          <td><input id='totalEarned' readonly></td>
+          <td><input id='totalEarned' class='output' readonly></td>
         </tr>
       </table>
   </form>

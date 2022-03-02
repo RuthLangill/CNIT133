@@ -37,6 +37,9 @@ input {
   border-radius: 3px;
   background-color: #e1ebee;
 }
+input.output {
+  text-align: right;
+}
 input:focus {
   background-color: #f8f8f8;
 }

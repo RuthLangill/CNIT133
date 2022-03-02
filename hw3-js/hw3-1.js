@@ -58,3 +58,9 @@ function calculate (){
     letter.value = 'A'
   }
 } 
+
+function clearForm(){
+  document.getElementById('inputData').reset()
+  document.getElementById('outputData').reset()
+  document.getElementById('msg').innerText = ''
+}
