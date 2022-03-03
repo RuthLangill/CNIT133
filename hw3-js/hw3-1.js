@@ -21,7 +21,7 @@ function calculate (){
     //console.log('nan')
     message.innerText = 'The input you put was invalid please try again with 4 numbers'
   } 
-  else if (finalAverage > 100){
+  else if (hw > 100 || mid > 100 || fin > 100 || par > 100){
     //console.log('to big')
     message.innerText = 'The numbers you entered were to large please try again with number between 0 and 100'
     return
