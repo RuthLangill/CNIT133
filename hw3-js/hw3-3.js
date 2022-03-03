@@ -4,7 +4,7 @@ function toF(){
   temp = parseInt(temp)
   validate(temp)
   let resultC = (9/5 * temp) + 32
-  document.getElementById('results').value = resultC.toFixed(0)
+  document.getElementById('results').value = temp + 'C is ' + resultC.toFixed(0)+ 'F'
 }
 
 function toC(){
@@ -12,7 +12,7 @@ function toC(){
   temp = parseInt(temp)
   validate(temp)
   let resultF = 5/9 * (temp - 32)
-  document.getElementById('results').value = resultF.toFixed(0)
+  document.getElementById('results').value = temp + 'F is '+ resultF.toFixed(0)+'C'
 }
 
 function validate(num){
