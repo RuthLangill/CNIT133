@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Ruth Langill homework assignment 5 part 1 for CNIT-133 Javascript course with CCSF">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ruth Langill">
+
+  <meta property="og:title" content="Homework 5 part 1 CNIT-133">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hills.ccsf.edu/~rlangill//hw556.html">
+
+  <title>Homework 5 part 1 Ruth Langill CNIT-133</title>
+  <link rel="stylesheet" href="../css/hw2.css">
+  <script>
+    function validateMyForm() {
+      let text = document.forms['myform']['text'].value
+
+      let checkbox1 = document.forms['myform']['one'].checked
+      let checkbox2 = document.forms['myform']['two'].checked
+      let checkbox3 = document.forms['myform']['three'].checked
+      let checkbox4 = document.forms['myform']['four'].checked
+
+      let radioYes = document.getElementById('yes').checked
+      let radioNo = document.getElementById('no').checked
+      let radioMaybe = document.getElementById('maybe').checked
+
+      let flavors = document.getElementById('flavor').value
+
+      let textError = document.getElementById('textError')
+      let checkboxError = document.getElementById('checkError')
+      let radioError = document.getElementById('radioError')
+      let flavorError = document.getElementById('flavorError')
+      if (text==''){
+        textError.innerText = 'Please input at least one character'
+      } else {
+        textError.innerText = ''
+      }
+
+      if (checkbox1 == false && checkbox2 == false && checkbox3 == false && checkbox4 == false) {
+              checkboxError.innerText = 'Please check at least one box'
+      } else {
+        checkboxError.innerText = ''
+      }
+
+      if (radioYes == false && radioNo == false && radioMaybe == false){
+              radioError.innerText = 'please select an aswer Yes, No, or Maybe'
+          } else {
+            radioError.innerText = ''
+          }
+
+      if (flavors == ''){
+        flavorError.innerText = 'please select an icecream flavor'
+      } else {
+        flavorError.innerText = ''
+      }
+    
+    }
+  </script>
+
+</head>
+<body>
+  <h1>Homework 5 part 1</h1>
+  <nav>
+    <ul class="menu">
+      <li><a href="../hw5.html">Home</a></li>
+    </ul>
+  </nav>
+  <form onsubmit=validateMyForm() action="formResult.html" method="post" id="myform">
+    <div id='textContainer'>
+      <label for='text'>Input Text</label>
+      <input type="text" name='textbox' id='text'>
+
+      <p id='textError'></p>
+    </div>
+    <div id="checkboxContainer">
+      <label for='one'>1</label>
+        <input id='one' name='one' type="checkbox">
+      <label for='two'>2</label>
+        <input id='two' name='two' type="checkbox">
+      <label for='three'>3</label>
+        <input id='three' name="three" type="checkbox">
+      <label for='four'>4</label>
+        <input id='four' name="four" type="checkbox">
+        <p id='checkError'></p>
+    </div>
+    
+    <div id="radiobuttonContainer">
+      <label for='yes'>Yes!</label>
+        <input id='yes' name='radioButton' type="radio">
+      <label for='no'>No!</label>
+        <input id='no' name='radioButton' type="radio">
+      <label for='maybe'>Maybe?</label>
+        <input id='maybe' name='radioButton' type="radio">
+      <p id="radioError"></p>
+    </div>
+    <div id='datalistContainer'>
+      <label for='flavor'>Choose an icecream flavor</label>
+      <input list="flavorsList" name='flavor' id="flavor">
+      <datalist id='flavorsList'>
+        <option value="Vanilla">
+        <option value="Chocolate">
+        <option value="Coffee">
+        <option value="Mint Chip">
+        <option value="Strawberry Shortcake">
+        <option value="Pumpkin Spice">
+      </datalist>
+      <p id='flavorError'></p>
+    </div>
+
+      <input type="submit" value='Submit'>
+
+  </form>
+  <p id=results></p>
+</body>
+</html>
