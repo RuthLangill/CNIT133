@@ -22,12 +22,13 @@
       let results = document.getElementById('results')
 
       
-      let check = numInput.split('.')
-      console.log(numInput, check)
-      if(check[1].length >= 4){
+      let regexCheckLength = /\d+\.\d{4,}/g;
+
+
+      if(regexCheckLength.test(numInput)){
         numInput = parseFloat(numInput)
         calculate(numInput)
-      } else{
+      } else {
         results.value = 'Please enter a number with at least 4 decimal positions'
       }
   
