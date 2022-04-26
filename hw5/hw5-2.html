@@ -5,14 +5,21 @@
   <meta name="description" content="Ruth Langill homework assignment 5 part 2 for CNIT-133 Javascript course with CCSF">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Ruth Langill">
-
   <meta property="og:title" content="Homework 5 part 2 CNIT-133">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hills.ccsf.edu/~rlangill//hw5-2.html">
-
   <title>Homework 5 part 2 Ruth Langill CNIT-133</title>
-  <link rel="stylesheet" href="../css/hw2.css">
+  <link rel="stylesheet" href="../css/hw5.css">
+  
   <script>
+    function openPage(){
+      let destination = myForm.collegelist.options[myForm.collegelist.selectedIndex].value;
+      window.open(destination, "new tab")
+    }
+    function openPage2(){
+      let destination = myForm.collegelist2.options[myForm.collegelist2.selectedIndex].value;
+      window.open(destination, "new tab")
+    }
   </script>
 
 </head>
@@ -20,8 +27,25 @@
   <h1>Homework 5 part 2</h1>
   <nav>
     <ul class="menu">
-      <li><a href="../hw5.html">Home</a></li>
+      <li><a href="../hw5.html">Back</a></li>
     </ul>
   </nav>
+  <form name='myForm'>
+    <select name='collegelist' onchange="openPage(this.form)">
+    <option>Choose A Community College>
+    <option value='https://www.ccsf.edu/'>City College of San Fransisco>
+    <option value="https://scc.losrios.edu/">Sacrramento City College>
+    <option value="https://flc.losrios.edu/">Folsom Lake College>
+    <option value="https://arc.losrios.edu/">American River College>
+  </select>
+  <select name='collegelist2'>
+    <option>Choose A Community College>
+    <option value='https://www.ccsf.edu/'>City College of San Fransisco>
+    <option value="https://scc.losrios.edu/">Sacrramento City College>
+    <option value="https://flc.losrios.edu/">Folsom Lake College>
+    <option value="https://arc.losrios.edu/">American River College>
+  </select> 
+  <input type="button" value='I choose this college' onclick='openPage2(this.form)'>
+  </form>
   </body>
   </html>

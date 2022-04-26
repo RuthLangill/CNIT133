@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
   <meta charset="UTF-8">
   <meta name="description" content="Ruth Langill homework assignment 5 part 1 for CNIT-133 Javascript course with CCSF">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
   <meta property="og:url" content="https://hills.ccsf.edu/~rlangill//hw556.html">
 
   <title>Homework 5 part 1 Ruth Langill CNIT-133</title>
-  <link rel="stylesheet" href="../css/hw2.css">
+  <link rel="stylesheet" href="../css/hw5.css">
   <script>
     function validateMyForm() {
       let text = document.forms['myform']['text'].value
@@ -31,67 +32,86 @@
       let checkboxError = document.getElementById('checkError')
       let radioError = document.getElementById('radioError')
       let flavorError = document.getElementById('flavorError')
-      if (text==''){
+
+      let textValid = false
+      let checkboxValid = false
+      let radioValid = false
+      let flavorVFalid = false
+
+      if (text == '') {
         textError.innerText = 'Please input at least one character'
       } else {
         textError.innerText = ''
+        textValid = true
       }
 
       if (checkbox1 == false && checkbox2 == false && checkbox3 == false && checkbox4 == false) {
-              checkboxError.innerText = 'Please check at least one box'
+        checkboxError.innerText = 'Please check at least one box'
       } else {
         checkboxError.innerText = ''
+        checkboxValid = true
       }
 
-      if (radioYes == false && radioNo == false && radioMaybe == false){
-              radioError.innerText = 'please select an aswer Yes, No, or Maybe'
-          } else {
-            radioError.innerText = ''
-          }
+      if (radioYes == false && radioNo == false && radioMaybe == false) {
+        radioError.innerText = 'Please select an aswer Yes, No, or Maybe'
+      } else {
+        radioError.innerText = ''
+        radioValid = true
+      }
 
-      if (flavors == ''){
-        flavorError.innerText = 'please select an icecream flavor'
+      if (flavors == '') {
+        flavorError.innerText = 'Please select an icecream flavor'
       } else {
         flavorError.innerText = ''
+        flavorValid = true
       }
-    
+
+      if(textValid === true && checkboxValid === true && radioValid ===true && flavorValid === true){
+        document.getElementById('results').innerText = 'Thank you the information you submitted was valid'
+      } else {
+        document.getElementById('results').innerText = ''
+      }
+    }
+    function resetForm(){
+      location.reload()
     }
   </script>
 
 </head>
+
 <body>
   <h1>Homework 5 part 1</h1>
   <nav>
     <ul class="menu">
-      <li><a href="../hw5.html">Home</a></li>
+      <li><a href="../hw5.html">Back</a></li>
     </ul>
   </nav>
-  <form onsubmit=validateMyForm() action="formResult.html" method="post" id="myform">
+  <form id="myform" name='myform'>
     <div id='textContainer'>
-      <label for='text'>Input Text</label>
+      <label for='text'>Input some text</label>
       <input type="text" name='textbox' id='text'>
 
       <p id='textError'></p>
     </div>
     <div id="checkboxContainer">
       <label for='one'>1</label>
-        <input id='one' name='one' type="checkbox">
+      <input id='one' name='one' type="checkbox">
       <label for='two'>2</label>
-        <input id='two' name='two' type="checkbox">
+      <input id='two' name='two' type="checkbox">
       <label for='three'>3</label>
-        <input id='three' name="three" type="checkbox">
+      <input id='three' name="three" type="checkbox">
       <label for='four'>4</label>
-        <input id='four' name="four" type="checkbox">
-        <p id='checkError'></p>
+      <input id='four' name="four" type="checkbox">
+      <p id='checkError'></p>
     </div>
-    
+
     <div id="radiobuttonContainer">
       <label for='yes'>Yes!</label>
-        <input id='yes' name='radioButton' type="radio">
+      <input id='yes' name='radioButton' type="radio">
       <label for='no'>No!</label>
-        <input id='no' name='radioButton' type="radio">
+      <input id='no' name='radioButton' type="radio">
       <label for='maybe'>Maybe?</label>
-        <input id='maybe' name='radioButton' type="radio">
+      <input id='maybe' name='radioButton' type="radio">
       <p id="radioError"></p>
     </div>
     <div id='datalistContainer'>
@@ -107,10 +127,12 @@
       </datalist>
       <p id='flavorError'></p>
     </div>
-
-      <input type="submit" value='Submit'>
-
+    <div>
+    <input type="button" value='Submit' onclick=validateMyForm()>
+    <input type='button' value='Reset' onclick=resetForm()>
+    </div>
   </form>
   <p id=results></p>
 </body>
+
 </html>

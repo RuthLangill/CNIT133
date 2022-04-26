@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Ruth Langill homework assignment 6 part 2 for CNIT-133 Javascript course with CCSF">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ruth Langill">
+
+  <meta property="og:title" content="Homework 6 part 2 CNIT-133">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hills.ccsf.edu/~rlangill//hw6/hw6-2.html">
+
+  <title>Ruth Langill CNIT-133</title>
+  <link rel="stylesheet" href="../css/hw6.css">
+  <script>
+    function getCharacter(){
+      let text = document.getElementById('textInput').value 
+      let textSearch = document.getElementById('searchInput').value
+
+
+      text = text.toLowerCase()
+      textSearch = textSearch.toLowerCase()
+      console.log(text, textSearch)
+
+      let charCount = 0
+      for (let i=0; i<text.length; i++){
+        if(textSearch == text.charAt(i)){
+          charCount++
+        }
+      }
+      if(charCount>0){
+        results.innerText = 'The character you searched for "'+textSearch+'" was found ' + charCount + ' times in the text you entered'
+      }
+      else{
+        console.log('not found')
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Homework 6 Part 2</h1>
+  <nav>
+    <ul class="menu">
+      <li><a href="../hw6.html">Back</a></li>
+      <li><a href='../hw6/hw6-1.html'>Part 1</a></li>
+      <li><a href="../hw6/hw6-3.html">Part 3</a></li>
+    </ul>
+  </nav>
+  <form>
+    <label for='textInput'>Enter some text</label>
+    <textarea id='textInput'></textarea>
+  <label for='searchInput'>Enter the charcter you want to search for</label>
+  <input id='searchInput' type="text">
+  <input type="button" value="search" onclick=getCharacter()>
+  <textarea id='results' readonly></textarea>
+</form>
+</body>
+</html>

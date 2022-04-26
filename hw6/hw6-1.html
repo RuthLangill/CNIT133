@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Ruth Langill homework assignment 6 part 1 for CNIT-133 Javascript course with CCSF">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ruth Langill">
+
+  <meta property="og:title" content="Homework 6 part 1 CNIT-133">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hills.ccsf.edu/~rlangill//hw6/hw6-1.html">
+
+  <title>Ruth Langill CNIT-133</title>
+  <link rel="stylesheet" href="../css/hw6.css">
+  <script>
+  
+
+    function validate(){
+      let numInput = document.getElementById('numInput').value 
+      let errorMsg = document.getElementById('errorMsg')
+      let results = document.getElementById('results')
+
+      
+      let check = numInput.split('.')
+      console.log(numInput, check)
+      if(check[1].length >= 4){
+        numInput = parseFloat(numInput)
+        calculate(numInput)
+      } else{
+        results.value = 'Please enter a number with at least 4 decimal positions'
+      }
+  
+    }
+    function calculate(num){
+      let rounded, squareRoot, tenths, hundreths, thousandths
+      let results = document.getElementById('results')
+
+      rounded = Math.round(num)
+      squareRoot = Math.round(Math.sqrt(num))
+      tenths = (Math.floor(num*10+.5)/10).toFixed(1) //need to round it not to fixed
+      hundreths = (Math.floor(num*100+.5)/100).toFixed(2)
+      thousandths = (Math.floor(num*1000+5)/1000).toFixed(3)
+
+      results.value = 'The Number you input was: '+num+'\n A) Rounded ' + rounded + '\n B) Rounded Square Root ' + squareRoot + '\n C) Rounded to the tenths place '+tenths+'\n D) Rounded to the hundreths place '+hundreths+'\n E) Rounded to the thousandths place '+thousandths
+
+
+    }
+
+
+  </script>
+</head>
+<body>
+  <h1>Homework 6 Part 1</h1>
+  <nav>
+    <ul class="menu">
+      <li><a href="../hw6.html">Back</a></li>
+      <li><a href="../hw6/hw6-2.html">Part 2</a></li>
+      <li><a href="../hw6/hw6-3.html">Part 3</a></li>
+    </ul>
+  </nav>
+  <p id='errorMsg'></p>
+  <form>
+    <label for='numInput'>Input a number</label>
+    <input id='numInput' name='numInput' type='number'>
+    <input value='Submit' type="button" onclick=validate()>
+    <textarea id='results'></textarea>
+    
+  </form>
+</body>
+</html>

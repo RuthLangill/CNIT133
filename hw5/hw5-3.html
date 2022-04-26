@@ -11,8 +11,45 @@
   <meta property="og:url" content="https://hills.ccsf.edu/~rlangill//hw5-3.html">
 
   <title>Homework 5 part 3 Ruth Langill CNIT-133</title>
-  <link rel="stylesheet" href="../css/hw2.css">
+  <link rel="stylesheet" href="../css/hw5.css">
   <script>
+    function displayState(){
+      let states = [
+        ['AL', 'Alabama', 'Montgomery', '4,903,185'],
+        ['AK', 'Alaska', 'Juneau', '731,545'],
+        ['AZ', 'Arizona',	'Phoenix',	'7,278,717'],
+        ['AR', 'Arkansas', 'Little Rock', '3,017,825'],
+        ['CA', 'California', 'Sacramento', '39,512,223'],
+        ['CO', 'Colorado', 'Denver', '5,758,736']
+      ]
+      let stateInput = document.getElementById('stateInput').value
+      let message = document.getElementById('message')
+      let stateData = []
+
+      for (let i = 0; i < states.length; i++){
+        if (states[i][0] == stateInput.toUpperCase()){
+          stateData = states[i]
+          displayStateData(stateData)
+          message.innerText = ''
+          break
+        }
+        else if (states[i][1].toLowerCase() == stateInput.toLowerCase()){
+          stateData = states[i]
+          displayStateData(stateData)
+          message.innerText = ''
+          break
+        }
+        else if (JSON.stringify(stateData) === JSON.stringify([])){
+          message.innerText = 'That state is not in our database try AL, AK, AZ, AR, CA, or CO'
+        }
+      }
+    }
+    function displayStateData(array){
+      document.getElementById('display').insertAdjacentHTML("afterbegin", '<table><tr><th>State Abreviation</th><th>State Name</th><th>Capital</th><th>Population</th></tr><tr><td>'+array[0]+'</td><td>'+array[1]+'</td><td>'+array[2]+'</td><td>'+array[3]+'</td></table>')
+    }
+    function resetDisplay(){
+      location.reload()
+    }
   </script>
 
 </head>
@@ -20,8 +57,19 @@
   <h1>Homework 5 part 3</h1>
   <nav>
     <ul class="menu">
-      <li><a href="../hw5.html">Home</a></li>
+      <li><a href="../hw5.html">Back</a></li>
     </ul>
   </nav>
+<div>
+  <form>
+    <label for='stateInput'>Enter a state</label>
+    <input type='text' id='stateInput'>
+    <input type='button' value='Show me the data!' onclick=displayState()>
+    <input type='button' value='reset page' onclick=resetDisplay()>
+  </form>
+</div>
+<p id='message'></p>
+<div id='display'></div>
+
   </body>
   </html>
