@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Ruth Langill homework assignment 7 part 1 for CNIT-133 Javascript course with CCSF">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ruth Langill">
+
+  <meta property="og:title" content="Homework 7 part 1 CNIT-133">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hills.ccsf.edu/~rlangill//hw7/hw7-1.html">
+
+  <title>Ruth Langill CNIT-133</title>
+  <link rel="stylesheet" href="../css/hw7.css">
+  <script>
+
+    function setBackgroundColor() {
+      let text = document.getElementById('text')
+
+      let red = document.getElementById('red').checked
+      let blue = document.getElementById('blue').checked
+      let yellow = document.getElementById('yellow').checked
+
+      if (red === true) {
+        text.style.backgroundColor = 'red'
+        text.style.color = 'white'
+      }
+      if (yellow === true) {
+        text.style.backgroundColor = 'yellow'
+        text.style.color = 'black'
+      }
+      if (blue === true) {
+        text.style.backgroundColor = 'blue'
+        text.style.color = 'white'
+      }
+    }
+
+    function setFontSize() {
+      let size = document.getElementById('font-size').value
+      let text = document.getElementById('text')
+      switch (size) {
+        case 'small':
+          text.style.fontSize = '.5em'
+          break
+        case 'medium':
+          text.style.fontSize = '1em'
+          break
+        case 'large':
+          text.style.fontSize = '2em'
+          break
+      }
+    }
+    function setWeight() {
+      let text = document.getElementById('text')
+      if (document.getElementById('bold').checked === true) {
+        text.style.fontWeight = 'bold'
+      }
+      else {
+        text.style.fontWeight = 'normal'
+      }
+
+    }
+    function setItalic() {
+      let text = document.getElementById('text')
+      if (document.getElementById('italicize').checked === true) {
+        text.style.fontStyle = 'italic'
+      }
+      else {
+        text.style.fontStyle = 'normal'
+      }
+    }
+    function setUnderline() {
+      let text = document.getElementById('text')
+      if (document.getElementById('underline').checked === true) {
+        text.style.textDecoration = 'underline'
+      } else text.style.textDecoration = 'none'
+    }
+
+  </script>
+</head>
+
+<body>
+  <h1>Homework 7 part 1</h1>
+  <nav>
+    <ul class="menu">
+      <li><a href="../hw7.html">Back</a></li>
+    </ul>
+  </nav>
+
+  <form>
+    <h3>Choose a background color!</h3>
+    
+      <div>
+        <input type="radio" name="background-color" id="red" value="Red" onclick="setBackgroundColor()">
+        <label for="red">Red</label>
+      </div>
+      <div>
+        <input type="radio" name="background-color" id="blue" value="Blue" onclick="setBackgroundColor()">
+        <label for="blue">Blue</label>
+      </div>
+      <div>
+        <input type="radio" name="background-color" id="yellow" value="yellow" onclick="setBackgroundColor()">
+        <label for="yellow">Yellow</label>
+      </div>
+    
+
+    <div id="listcontainer">
+      <h3>Choose how large you would like the text</h3>
+      <select id="font-size" onchange="setFontSize()">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+        </select>
+    </div>
+  
+    <h3>Set font qualities</h3>
+
+    
+      <div>
+        <input type="checkbox" id="bold" value="bold" onclick="setWeight()">
+        <label for="bold">Bold</label>
+      </div>
+      <div>
+        <input type="checkbox" id="italicize" value="italicize" onclick="setItalic()">
+        <label for="italicize">Italicize</label>
+      </div>
+      <div>
+        <input type="checkbox" id="underline" value="underline" onclick="setUnderline()">
+        <label for="underline">Underline</label>
+      </div>
+    
+
+  </form>
+  <p id="text">
+    Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world 
+  </p>
+
+</body>
+
+</html>
