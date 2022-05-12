@@ -23,16 +23,20 @@
       let yellow = document.getElementById('yellow').checked
 
       if (red === true) {
-        text.style.backgroundColor = 'red'
-        text.style.color = 'white'
+        text.classList.add('red')
+        text.classList.remove('blue', 'yellow')
+
       }
       if (yellow === true) {
-        text.style.backgroundColor = 'yellow'
-        text.style.color = 'black'
+        text.classList.add('yellow')
+        text.classList.remove('blue', 'red')
+
+
       }
       if (blue === true) {
-        text.style.backgroundColor = 'blue'
-        text.style.color = 'white'
+        text.classList.add('blue')
+        text.classList.remove('red', 'yellow')
+
       }
     }
 
@@ -41,40 +45,45 @@
       let text = document.getElementById('text')
       switch (size) {
         case 'small':
-          text.style.fontSize = '.5em'
+          text.classList.add('small')
+          text.classList.remove('medium', 'large')
           break
         case 'medium':
-          text.style.fontSize = '1em'
+          text.classList.add('medium')
+          text.classList.remove('small', 'large')
           break
         case 'large':
-          text.style.fontSize = '2em'
+          text.classList.add('large')
+          text.classList.remove('small', 'medium')
           break
       }
     }
     function setWeight() {
       let text = document.getElementById('text')
       if (document.getElementById('bold').checked === true) {
-        text.style.fontWeight = 'bold'
+        text.classList.add('bold')
       }
       else {
-        text.style.fontWeight = 'normal'
+        text.classList.remove('bold')
       }
 
     }
     function setItalic() {
       let text = document.getElementById('text')
       if (document.getElementById('italicize').checked === true) {
-        text.style.fontStyle = 'italic'
+        text.classList.add('italic')
       }
       else {
-        text.style.fontStyle = 'normal'
+        text.classList.remove('italic')
       }
     }
     function setUnderline() {
       let text = document.getElementById('text')
       if (document.getElementById('underline').checked === true) {
-        text.style.textDecoration = 'underline'
-      } else text.style.textDecoration = 'none'
+        text.classList.add('underline')
+      } else {
+        text.classList.remove('underline')
+      }
     }
 
   </script>
@@ -90,20 +99,20 @@
 
   <form>
     <h3>Choose a background color!</h3>
-    
-      <div>
-        <input type="radio" name="background-color" id="red" value="Red" onclick="setBackgroundColor()">
-        <label for="red">Red</label>
-      </div>
-      <div>
-        <input type="radio" name="background-color" id="blue" value="Blue" onclick="setBackgroundColor()">
-        <label for="blue">Blue</label>
-      </div>
-      <div>
-        <input type="radio" name="background-color" id="yellow" value="yellow" onclick="setBackgroundColor()">
-        <label for="yellow">Yellow</label>
-      </div>
-    
+
+    <div>
+      <input type="radio" name="background-color" id="red" value="Red" onclick="setBackgroundColor()">
+      <label for="red">Red</label>
+    </div>
+    <div>
+      <input type="radio" name="background-color" id="blue" value="Blue" onclick="setBackgroundColor()">
+      <label for="blue">Blue</label>
+    </div>
+    <div>
+      <input type="radio" name="background-color" id="yellow" value="yellow" onclick="setBackgroundColor()">
+      <label for="yellow">Yellow</label>
+    </div>
+
 
     <div id="listcontainer">
       <h3>Choose how large you would like the text</h3>
@@ -111,29 +120,30 @@
         <option value="small">Small</option>
         <option value="medium">Medium</option>
         <option value="large">Large</option>
-        </select>
+      </select>
     </div>
-  
+
     <h3>Set font qualities</h3>
 
-    
-      <div>
-        <input type="checkbox" id="bold" value="bold" onclick="setWeight()">
-        <label for="bold">Bold</label>
-      </div>
-      <div>
-        <input type="checkbox" id="italicize" value="italicize" onclick="setItalic()">
-        <label for="italicize">Italicize</label>
-      </div>
-      <div>
-        <input type="checkbox" id="underline" value="underline" onclick="setUnderline()">
-        <label for="underline">Underline</label>
-      </div>
-    
+
+    <div>
+      <input type="checkbox" id="bold" value="bold" onclick="setWeight()">
+      <label for="bold">Bold</label>
+    </div>
+    <div>
+      <input type="checkbox" id="italicize" value="italicize" onclick="setItalic()">
+      <label for="italicize">Italicize</label>
+    </div>
+    <div>
+      <input type="checkbox" id="underline" value="underline" onclick="setUnderline()">
+      <label for="underline">Underline</label>
+    </div>
+
 
   </form>
   <p id="text">
-    Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world 
+    Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello world Hello
+    world Hello world Hello world Hello world Hello world Hello world Hello world Hello world
   </p>
 
 </body>

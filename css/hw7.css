@@ -24,6 +24,7 @@ p {
   color: #1D3557;
   border: solid 2px #1D3557;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -37,6 +38,37 @@ div {
 label {
   font-weight: bold;
 }
+.red {
+  background-color: red;
+  color: white;
+}
+.blue {
+  background-color: blue;
+  color: white;
+}
+.yellow {
+  background-color: yellow;
+  color: black;
+}
+.small {
+  font-size: .5em;
+}
+.medium {
+  font-size: 1em;
+}
+.large {
+  font-size: 2em;
+}
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+.underline {
+  text-decoration: underline;
+}
+
 #font-size {
   margin-left: 25%;
 }
