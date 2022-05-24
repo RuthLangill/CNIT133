@@ -5,6 +5,7 @@ h1 {
   padding: 50px;
   font-size: 2.5em;
   background-color: #457B9D;
+  border-radius: 15px;
 }
 a:hover {
   color: #024959;
