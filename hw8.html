@@ -61,10 +61,19 @@
     table {
       margin-left: 5%;
     }
+    hr {
+      border: 2px solid #457B9D;
+      border-radius: 6px;
+      margin: 20px;
+    }
+    td {
+      margin: 25px;
+      padding: 25px;
+    }
 
     #apiTable {
       background-color: #F1FAEE;
-      margin-left: 15%;
+      margin-left: 12%;
       margin-right: 8%;
       border-radius: 16px;
       padding: 15px;
@@ -72,11 +81,15 @@
 
     #description {
       font-size: 1em;
-      margin-left: 5%;
+      padding: 10px;
+      margin: 10px;
     }
     #nameSuggestion {
-      margin-left: 15%;
+      margin-left: 40%;
       margin-right: 8%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     /* Color Theme Swatches in Hex */
@@ -117,8 +130,8 @@
 
   <div id="nameSuggestion">
 
-    <p><b>Start typing a name in the input field below:</b></p>
-    <form action="">
+    <p>Start typing a name in the input field below:<p>
+    <form>
       <label for="fname">First name:</label>
       <input type="text" id="fname" name="fname" onkeyup="showHint(this.value)">
     </form>
@@ -132,27 +145,30 @@
       <li>Real-time Air Quality Index (AQI)</li>
       <li>Real-time weather data</li>
     </ul>
-    <p id='description' class="darkblue">I have found Air Visual to be useful in my personal life for monitoring air quality, especially anyone trying to
+    <p id='description' class="darkblue">I have found Air Visual to be useful in my personal life for monitoring air quality, especially when trying to
       coordinate outdoor activities in
-      California during fire season. Although air visual can be a useful tool to monitor air quality around the globe.
+      California during fire season. I think that air visual could be a useful tool for any business to monitor air quality wherever they are located around the globe.
     </p>
+    <hr>
 
     <table>
       <tr>
         <td>What type of response file you get?</td>
-        <td>JSON</td>
+        <td>The response file type is JSON</td>
       </tr>
       <tr>
         <td>Do you need any type of key to access and use the API?</td>
-        <td>Yes you need an API key in order to make </td>
+        <td>Yes you need an API key in order to make API calls</td>
       </tr>
       <tr>
         <td>Do the companies need to pay any fee to use the API and if they need, how is that charged?</td>
         <td>There is a community plan that is free you just need to sign up, you are allowed up to 10,000 calls per
-          month on the free plan. In order to make more api calls than that you are required to upgrade your plan. In order to find out exact details about pricing you need to inquire with IQ Air</td>
+          month on the free plan. In order to make more API calls than that you are required to upgrade your plan. In order to find out exact details about pricing you need to inquire with IQ Air</td>
       </tr>
       <tr>
-        <td>Documentation:</td>
+        <td colspan="2">Documentation:</td>
+        </tr>
+        <tr>
         <td><a href="https://www.iqair.com/air-pollution-data-api?ref=apilist.fun">Air Visual Website</a>
         </td>
         <td><a href='https://api-docs.iqair.com/'>Air Visual API documentation</a> </td>

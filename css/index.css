@@ -1,6 +1,6 @@
 h1 {
   border: 2px solid #024959;
-  color:#024959;
+  color: #024959;
   text-align: center;
   padding: 50px;
   font-size: 2.5em;
@@ -18,25 +18,22 @@ a {
   text-decoration: none;
   color: #1D3557;
 }
+
 p {
-  margin-top: 50px;
-  margin-left: 20%;
-  margin-right: 3%;
   font-size: 1em;
-  padding: 10px;
-  line-height: 20px;
 }
+
 a:hover {
   color: #024959;
 }
 
 ul.menu li {
-list-style: none;
-padding: 10px;
-margin: 20px;
-background-color: #F29F05;
-color: #024959;
-transition: background-color 1.5s, color 1s;
+  list-style: none;
+  padding: 10px;
+  margin: 20px;
+  background-color: #F29F05;
+  color: #024959;
+  transition: background-color 1.5s, color 1s;
 }
 
 ul#index-menu li {
@@ -77,12 +74,13 @@ ul#index-menu li {
 
 /*small screen*/
 @media only screen and (max-width: 600px) {
-  body{
+  body {
     display: flex;
     flex-direction: column;
     background-color: #A8DADC;
     color: #1D3557;
   }
+
   .menu {
     display: flex;
     width: 100%;
@@ -96,41 +94,59 @@ ul#index-menu li {
 
 /*big screen*/
 @media only screen and (min-width: 600px) {
-body {
-  background-color: #A8DADC;
-  color: #024959;
-}
-.menu {
-  display: flex;
-  flex-direction: column;
-  float: left;
-  background-color: #457B9D;
-  text-decoration: none;
-  margin: auto;
-  list-style: none;
-  padding: unset;
-}
-#index-menu{
-  display: flex;
-  flex-direction: column;
-  background-color: #457B9D;
-  text-decoration: none;
-  margin: auto;
-  list-style: none;
-  padding: 10px;
-  align-content: center;
-  max-width: 80%;
-  border-radius: 15px;
-}
+  body {
+    background-color: #A8DADC;
+    color: #024959;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    background-color: #457B9D;
+    text-decoration: none;
+    margin: auto;
+    list-style: none;
+    padding: unset;
+  }
+
+  #index-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #457B9D;
+    text-decoration: none;
+    margin: auto;
+    list-style: none;
+    padding: 10px;
+    align-content: center;
+    max-width: 80%;
+    border-radius: 15px;
+  }
 }
 
 
 
 /* Color Theme Swatches in Hex */
-.yellow { color: #F2BA52}
-.mustard {color: #F29F05}
-.lightblue { color: #F1FAEE; }
-.midblue { color: #A8DADC; }
-.greyblue { color: #457B9D; }
-.darkblue { color: #1D3557; }
+.yellow {
+  color: #F2BA52
+}
 
+.mustard {
+  color: #F29F05
+}
+
+.lightblue {
+  color: #F1FAEE;
+}
+
+.midblue {
+  color: #A8DADC;
+}
+
+.greyblue {
+  color: #457B9D;
+}
+
+.darkblue {
+  color: #1D3557;
+}
